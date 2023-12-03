@@ -99,6 +99,7 @@ public class TempEnemy : MonoBehaviour
         }
     }
 
+    //called by grenade
     public void grenadeHit(Vector3 explosionCenter, float explosionForce, float explosionRadius)
     {
         SoundManager.Instance.playSound("Enemy_Damage");
@@ -110,6 +111,8 @@ public class TempEnemy : MonoBehaviour
         currentState = State.Stunned;
         stunTimer = 0f;
     }
+
+    //enemy attack behavior
     void attack()
     {
         agent.stoppingDistance = range/2;
@@ -119,6 +122,7 @@ public class TempEnemy : MonoBehaviour
         gun.ammo = 30;
     }
 
+    //enemy patrol behavior
     void patrol()
     {
         a.SetBool("isIdle", false);
@@ -137,6 +141,7 @@ public class TempEnemy : MonoBehaviour
         agent.destination = currentTarget.position;
     }
     
+    //enemy idle behavior
     void idle()
     {
         a.SetBool("isIdle", true);
@@ -149,6 +154,7 @@ public class TempEnemy : MonoBehaviour
         }
     }
 
+    //enemy stun behavior
     void stunned()
     {
         a.SetBool("isIdle", true);
@@ -162,6 +168,7 @@ public class TempEnemy : MonoBehaviour
         }
     }
 
+    //called when the enemy reaches 0 health
     void die()
     {
         if (deathTimer < 1.5f)
@@ -186,6 +193,7 @@ public class TempEnemy : MonoBehaviour
         }
     }
 
+    //used to detect bullet hits
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "PlayerBullet")

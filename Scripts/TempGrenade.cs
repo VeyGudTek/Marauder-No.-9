@@ -19,9 +19,11 @@ public class TempGrenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //update time alive
         timer += Time.deltaTime;
     }
 
+    //used by grenade throw script to detonate grenade
     public void detonate()
     {
         Instantiate(explosionEffect, transform.position, transform.rotation);

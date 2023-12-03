@@ -59,11 +59,14 @@ public class ShieldScript : MonoBehaviour
         updateShieldStats();
     }
 
+    //Change colors
     void updateMatAlpha()
     {
         UnityEngine.Color color = new UnityEngine.Color(1f , 2 * (shieldHealth / 100), 2 * (shieldHealth / 100));
         shieldMat.color = color;
     }
+
+    //Called when button is pressed to turn on shield
     public void deployShield()
     {
         if (!isBroken)
@@ -80,6 +83,7 @@ public class ShieldScript : MonoBehaviour
         shieldMesh.enabled = false;
     }
 
+    //called when shield reaches 0 health
     private void breakShield()
     {
         SoundManager.Instance.playSound("Shield_Break");
@@ -87,6 +91,7 @@ public class ShieldScript : MonoBehaviour
         isBroken = true;
     }
 
+    //controls interaction between shield and bullets
     private void reflectBullets()
     {
         if (shieldOn)
@@ -108,6 +113,7 @@ public class ShieldScript : MonoBehaviour
         }
     }
 
+    //used to update shield health and state
     private void updateShieldStats()
     {
         //if Shield is broken, run these conditions
@@ -142,12 +148,15 @@ public class ShieldScript : MonoBehaviour
         }
     }
 
+    //attempt to fix alpha bug (failed)
     private void OnDisable()
     {
         UnityEngine.Color color = shieldMat.color;
         color.a = (1);
         shieldMat.color = color;
     }
+
+    //put bullets in list when overlapping
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
@@ -156,6 +165,7 @@ public class ShieldScript : MonoBehaviour
         }
     }
     
+    //remove bullets from list when overlapping
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Bullet" && bullets.Contains(other.gameObject))

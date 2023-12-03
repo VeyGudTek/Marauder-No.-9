@@ -27,6 +27,7 @@ public class WeaponControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //player input
         if (p.pi.inputFire && gun)
         {
             gun.GetComponent<GunScript>().onClick(playerRB.velocity.x, "PlayerBullet");
@@ -51,6 +52,7 @@ public class WeaponControl : MonoBehaviour
         }
     }
 
+    //switch current gun to one near the player
     private void swapGun()
     {
         //get colliders of immediate vicinity
@@ -71,9 +73,9 @@ public class WeaponControl : MonoBehaviour
         }
     }
 
+    //get rid of current gun
     private void removeGun()
     {
-        //get rid of current gun
         if (gun)
         {
             gun.transform.parent = null;
@@ -82,6 +84,7 @@ public class WeaponControl : MonoBehaviour
         }
     }
 
+    //sets gun object as player's current gun
     private void pickUpGun(GameObject newGun)
     {        //set new gun
         gun = newGun;

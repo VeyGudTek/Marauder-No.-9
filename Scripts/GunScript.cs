@@ -49,11 +49,13 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //called on mouse up
     public void onFireUp()
     {
         canFire = true;
     }
 
+    //called on mouse down
     public void onClick(float playerVelocity, string bulletTag)
     {
         //Control Rate of Fire
@@ -81,6 +83,7 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //called if gun is bursting
     void burst()
     {
         if (fireTimer > fireRate && ammo > 0)
@@ -103,6 +106,7 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //Shoot bullet
     public void FireGun(float playerVelocity, string bulletTag)
     {
         SoundManager.Instance.playSound("Shoot_Lazer");
@@ -123,6 +127,7 @@ public class GunScript : MonoBehaviour
         clone.GetComponent<BulletScript>().damage = damage;
     }
 
+    //set variables on death
     public void onEnemyDeath()
     {
         type = typeOnDeath;

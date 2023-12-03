@@ -21,6 +21,7 @@ public class TempLootSplash : MonoBehaviour
 
     }
 
+    //spawns loot randomly around transform and adds explosion force
     public void spawnLoot()
     {
         Vector3 spawnPosition;

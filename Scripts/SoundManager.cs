@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxShield;
     [SerializeField] private GameManager gm;
 
+    //Make sure there's only one manager in each scene
     private void Awake()
     {
         if (Instance == null)
@@ -28,17 +29,21 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //play music on game start
     private void Start()
     {
         SoundManager.Instance.playMusic("Menu");
     }
 
+    //update volume
     private void Update()
     {
         musicSource.volume = gm.GetMusicVolume() / 10;
         sfxStateSource.volume = gm.GetSFXVolume() / 10;
         sfxShield.volume = gm.GetSFXVolume() / 10;
     }
+
+    //use to play sound Oneshot sound effects
     public void playSound(string soundName)
     {
         Sound s = Array.Find(soundClips, x => x.name == soundName);
@@ -53,6 +58,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //used to play music
     public void playMusic(string musicName)
     {
         Sound s = Array.Find(musicClips, x => x.name == musicName);
@@ -69,6 +75,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    //used to play continuous player sounds(footsepts, jetpack)
     public void playStateSound(string soundName)
     {
         Sound s = Array.Find(soundClips, x => x.name == soundName);
@@ -90,6 +97,7 @@ public class SoundManager : MonoBehaviour
         sfxStateSource.Stop();
     }
 
+    //used to play the shield sound effect
     public void playShieldSound()
     {
         Sound s = Array.Find(soundClips, x => x.name == "Shield");

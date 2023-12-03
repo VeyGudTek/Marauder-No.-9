@@ -16,6 +16,7 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Delete itself after certain distance
         if (Vector3.Distance(initialPosition, this.transform.position) > range)
         {
             Destroy(this.gameObject);

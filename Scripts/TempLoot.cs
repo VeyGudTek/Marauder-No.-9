@@ -19,6 +19,7 @@ public class TempLoot : MonoBehaviour
         stopFalling();
     }
 
+    //detect if object has hit ground, stop moving if so
     private void stopFalling()
     {
         if (falling)

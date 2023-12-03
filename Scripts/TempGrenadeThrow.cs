@@ -36,6 +36,7 @@ public class TempGrenadeThrow : MonoBehaviour
         }
     }
 
+    //called whenever the player presses the throw grenade input
     public void onClick()
     {
         if (throwTimer <= throwDelay)
@@ -49,6 +50,7 @@ public class TempGrenadeThrow : MonoBehaviour
         }
     }
 
+    //detonate grenades after a time
     void timeOutGrenades()
     {
         foreach (GameObject clone in new List<GameObject>(grenade_list))
@@ -60,6 +62,8 @@ public class TempGrenadeThrow : MonoBehaviour
             }
         }
     }
+
+    //detonate all existing grenades
     void detonateGrenades()
     {
         foreach(GameObject clone in new List<GameObject>(grenade_list))
@@ -69,6 +73,7 @@ public class TempGrenadeThrow : MonoBehaviour
         }
     }
 
+    //instantiate a new grenade
     void throwGrenade()
     {
         GameObject clone = Instantiate(grenade, this.transform.position + transform.forward, Quaternion.identity);
