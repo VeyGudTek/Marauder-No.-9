@@ -10,7 +10,7 @@
 Click to Play
 
 ## My Role
-&emsp;I worked as a programmer on this project. We were working in Unity, so the scripts were written in C#. My job was to create and implement the majority of the functionality present in the game. I communicated with the project manager to understand what systems needed to be present, as well as how he wanted them implemented. This repository contains only all the scripts I worked on; You can find access to the rest of the project in the __Where to Find the Project__ section. You can find a breakdown of what each script does in the __Code Breakdown__ section.
+&emsp;I worked as a programmer on this project. We were working in Unity, so the scripts were written in C#. My job was to create and implement the majority of the functionality present in the game. I communicated with the project manager to understand what systems needed to be present, as well as how the systems should be implemented. This repository contains only the scripts I worked on; You can find access to the rest of the project in the __Where to Find the Project__ section. You can find a breakdown of what each script does in the __Code Breakdown__ section.
 
 ## Where to Find the Project
 - For a full list of credits and a playable version of the game, visit the [itch.io](https://matt-012.itch.io/marauder-no-9) page
