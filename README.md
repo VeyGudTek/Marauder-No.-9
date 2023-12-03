@@ -11,3 +11,30 @@
 - For a full list of credits and a playable version of the game, visit the [itch.io](https://matt-012.itch.io/marauder-no-9) page
 - For the production breakdown of the entire project, visit the [Miro board](https://miro.com/app/board/uXjVMjeFY_Q=/?share_link_id=106949044377)
 - Additionally, you can visit the project's [Github Repository](https://github.com/Matthew078/Marauder-No.-9)
+
+## Code Breakdown
+Here is a list of all the scripts I created for this project and the functionality built into each one:
+
+Bullet
+- Deletes itself based on the distance traveled
+<br>
+
+Gun
+- Has 3 types of firing mode
+  - Auto - Hold to shoot
+  - Semi - Click to shoot
+  - burst - Click to shoot multiple
+- Customizable variables for modular implementation:
+  - Bullets - speed, damage, range
+  - Gun - Firerate, firetype, ammo
+- Sets variables on death
+- Processes player click
+- Fires gun by instantiating bullets
+<br>
+
+Shield
+- Processes player input
+- Turn on and off
+- Reflects or Destroys bullets depending on time
+- 
+
