@@ -1,5 +1,8 @@
 # Marauder-No.-9
 
+## Demo Video (Click to Play)
+[![Gameplay](https://img.itch.zone/aW1hZ2UvMjM3MzU2My8xNDA2NTE1OC5wbmc=/original/Zk20Of.png)](\https://www.youtube.com/watch?v=OOYhYw7d50w&t=1s)
+
 ## Summary 
 &emsp;Marauder No. 9 is a 2.5-D shooter-platformer which takes place in a future where human space travel is commonplace and bounty hunters are prevalent. In this game, the player is an infamous bounty hunter known only as 'Marauder-09' aboard a hostile space vessel guarded by robot enemies. Armed with a dangerous arsenal and equipped with advanced power-armor, the player must engage in dangerous shootouts with the ship's robot crew. It is the player's goal to clear the vessel and make their way to the end of the level.
 
