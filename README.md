@@ -15,11 +15,11 @@
 ## Code Breakdown
 Here is a list of all the scripts I created for this project and the functionality built into each one:
 
-Bullet
+__Bullet__
 - Deletes itself based on the distance traveled
-<br>
+ <br>
 
-Gun
+__Gun__
 - Has 3 types of firing mode
   - Auto - Hold to shoot
   - Semi - Click to shoot
@@ -30,11 +30,79 @@ Gun
 - Sets variables on death
 - Processes player click
 - Fires gun by instantiating bullets
-<br>
+ <br>
 
-Shield
+__WeaponControl__
+- Process Player Inputs
+- Call onClick function of player's current gun
+- Swap gun
+  - Detect all guns in proximity
+  - Drop current gun
+  - Equip new gun
+ <br>
+
+__Shield__
 - Processes player input
-- Turn on and off
+  - Turn on and off
 - Reflects or Destroys bullets depending on time
-- 
+- Break at 0 health, remain unusable for a short period
+- Update shield health and state
+ <br>
+
+__Sound__
+- Class containing a string name and an AudioClip
+- Used by SoundManager to map string names to AudioClips for easy access
+ <br>
+
+__SoundManager__
+- Stores all SFX and music in Sound Arrays
+- Allows any script to play a sound by calling its functions with the sound's name
+- Uses multiple functions to implement overlapping sounds
+- Adjusts volume based on variables provided by the Game Manager
+- Design originated from [this youtube video](https://www.youtube.com/watch?v=rdX7nhH6jdM)
+ <br>
+
+__Enemy__
+- Has Four States
+  - Idle
+      - Enters when patrol reaches destination
+      - Stand still, then return to patrol
+  - Patrol
+      - Walks to a point
+      - After reaching point, switch destinations and enter idle
+      - Destinations implemented modularly with tranform objects
+  - Attack
+      - Enters whenever player is in proximity
+      - Walk towards player and shoot
+      - If player not in vicinity, exit to patrol
+  - Stunned
+    - Enters when enemy is hit by grenade
+    - Used to deactivate NavMesh as to not interfere with Rigidbody
+- Has function for processing grenade hits
+- Detects when it has been hit by bullet
+- Dies upon reach 0 health
+ <br>
+
+__Grenade__
+- Contains a timer
+- Contains a detonate function that detects all enemies in the proximity
+ <br>
+
+__GrenadeThrow__
+- Processes Player input
+  - Single tap to throw
+  - Double tap to detonate
+- Detonates grenades based on time
+- Instanstiate new grenade on throw
+ <br>
+
+__Loot__
+- Detects when loot hits the ground and stops falling
+- Implemented so player can walk through and detect the loot
+ <br>
+
+__LootSpawn__
+- Creates an explosion of loot by instantiating loot objects and adding an explosiong force
+- Called on enemy death
+ <br>
 
