@@ -1,16 +1,16 @@
-# Marauder-No.-9
+# Marauder-No.-9 (Programmer)
 
 ## Summary 
 &emsp;Marauder No. 9 is a 2.5-D shooter-platformer which takes place in a future where human space travel is commonplace and bounty hunters are prevalent. In this game, the player is an infamous bounty hunter known only as 'Marauder-09' aboard a hostile space vessel guarded by robot enemies. Armed with a dangerous arsenal and equipped with advanced power-armor, the player must engage in dangerous shootouts with the ship's robot crew. It is the player's goal to clear the vessel and make their way to the end of the level.
 
 &emsp;This project is targeted towards challenge-motivated gamers who enjoy playing action games and/or shooters. Our targeted audience might show similar interest in games such as Metroid, Dead Cells, FromSoftware games, etc. This project aims to engage this audience through intuitive and compelling combat systems and well-constructed combat encounters.
 
+## My Role
+&emsp;I worked as a programmer on this project. We were working in Unity, so the scripts were written in C#. My job was to create and implement the majority of the functionality present in the game. I communicated with the project manager to understand what systems needed to be present, as well as how the systems should be implemented. This repository contains only the scripts I worked on; You can find access to the rest of the project in the __Where to Find the Project__ section. You can find a breakdown of what each script does in the __Code Breakdown__ section.
+
 ## Demo Video
 [![Gameplay](https://img.itch.zone/aW1hZ2UvMjM3MzU2My8xNDA2NTE1OC5wbmc=/original/Zk20Of.png)](https://www.youtube.com/watch?v=OOYhYw7d50w&t=1s)
 Click to Play
-
-## My Role
-&emsp;I worked as a programmer on this project. We were working in Unity, so the scripts were written in C#. My job was to create and implement the majority of the functionality present in the game. I communicated with the project manager to understand what systems needed to be present, as well as how the systems should be implemented. This repository contains only the scripts I worked on; You can find access to the rest of the project in the __Where to Find the Project__ section. You can find a breakdown of what each script does in the __Code Breakdown__ section.
 
 ## Where to Find the Project
 - For a full list of credits and a playable version of the game, visit the [itch.io](https://matt-012.itch.io/marauder-no-9) page
